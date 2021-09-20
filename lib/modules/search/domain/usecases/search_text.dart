@@ -1,13 +1,22 @@
 import 'package:inspec_solar/modules/search/domain/entities/teste_search.dart';
 import 'package:dartz/dartz.dart';
 import 'package:inspec_solar/modules/search/domain/errors/error_search.dart';
+import 'package:inspec_solar/modules/search/domain/repositories/teste_repository.dart';
 
-abstract class search_by_text {
-  Future<Either<error_search, List<search_by_text>>> call(String listsearch);
+abstract class SearchByText {
+  Future<Either<ErrorSearch, List<SearchByText>>> call(String listsearch);
 }
 
-class search_by_textImpl implements search_by_text {
+class SearchByTextImpl implements SearchByText {
+  
+  //Perguntar ao Jheime - eu coloquei final e como sugestão ele pediu para colocar um late antes... não entendi
+  late final TesteRepository repository;
+
+  SearchByTextImpl(this.repository);
+
   @override
-  Future<Either<error_search, List<search_by_text>>> call(
-      String listsearch) async {}
+  Future<Either<ErrorSearch, List<SearchByText>>> call(
+      String listsearch) async {
+    return repository.search(listsearch);
+  }
 }

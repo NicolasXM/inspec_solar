@@ -1,6 +1,6 @@
-class teste_search {
+class TesteSearch {
   final String title;
   final String subtitle;
 
-  teste_search({required this.title, required this.subtitle});
+  TesteSearch({required this.title, required this.subtitle});
 }

@@ -1,1 +1,1 @@
-abstract class error_search implements Exception {}
+abstract class ErrorSearch implements Exception {}
