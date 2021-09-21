@@ -7,7 +7,7 @@ import 'package:inspec_solar/modules/search/domain/usecases/search_text.dart';
 
 class TesteRepositoryImp implements TesteRepository {
   @override
-  Future<Either<ErrorSearch, List<SearchByText>>> search(String listsearch) {
+  Future<Either<ErrorSearch, List<TesteSearch>>> search(String listsearch) {
     throw UnimplementedError();
   }
 }
@@ -19,7 +19,6 @@ main() {
   test('teste de retorno', () async {
     final result = await usecase("teste");
 
-    expect(result, isA<Right>());
     expect(result | null, isA<List<TesteSearch>>());
   });
 }
