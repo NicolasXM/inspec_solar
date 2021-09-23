@@ -13,11 +13,26 @@ main() {
   final usecase = SearchByTextImpl(repository);
 
   test('teste de retorno', () async {
-    when(
-        repository.search(any).thenAnswer((_) async => Right(<TesteSearch>[])));
+    when(repository.search('any'))
+        .thenAnswer((_) async => Right(<TesteSearch>[]));
 
-    late final result = usecase("teste");
+    final result = await usecase("teste");
 
-    expect(result | null, isA<List<TesteSearch>>());
+    expect(result, isA<List<TesteSearch>>());
+  });
+
+  test('deve retornar uma exception', () async {
+    when(repository.search('any'))
+        .thenAnswer((_) async => Right(<TesteSearch>[]));
+
+    var result = await usecase(null);
+
+    expect(result.isLeft(), true);
+    expect(result.fold(id, id), isA<InvalidTextError>());
+
+    result = await usecase("");
+
+    expect(result.isLeft(), true);
+    expect(result.fold(id, id), isA<InvalidTextError>());
   });
 }
