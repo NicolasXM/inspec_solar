@@ -5,3 +5,4 @@ import 'package:inspec_solar/modules/search/domain/errors/error_search.dart';
 abstract class TesteRepository {
   Future<Either<ErrorSearch, List<TesteSearch?>>> search(String listsearch);
 }
+
