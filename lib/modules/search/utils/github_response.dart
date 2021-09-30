@@ -1,0 +1,71 @@
+const githubResult = """
+
+  {
+  "total_count": 3,
+  "incomplete_results": false,
+  "items": [
+    {
+      "login": "NicolasXM",
+      "id": 90805926,
+      "node_id": "MDQ6VXNlcjkwODA1OTI2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/90805926?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/NicolasXM",
+      "html_url": "https://github.com/NicolasXM",
+      "followers_url": "https://api.github.com/users/NicolasXM/followers",
+      "following_url": "https://api.github.com/users/NicolasXM/following{/other_user}",
+      "gists_url": "https://api.github.com/users/NicolasXM/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/NicolasXM/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/NicolasXM/subscriptions",
+      "organizations_url": "https://api.github.com/users/NicolasXM/orgs",
+      "repos_url": "https://api.github.com/users/NicolasXM/repos",
+      "events_url": "https://api.github.com/users/NicolasXM/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/NicolasXM/received_events",
+      "type": "User",
+      "site_admin": false,
+      "score": 1.0
+    },
+    {
+      "login": "nicolasxmm",
+      "id": 5919911,
+      "node_id": "MDQ6VXNlcjU5MTk5MTE=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5919911?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/nicolasxmm",
+      "html_url": "https://github.com/nicolasxmm",
+      "followers_url": "https://api.github.com/users/nicolasxmm/followers",
+      "following_url": "https://api.github.com/users/nicolasxmm/following{/other_user}",
+      "gists_url": "https://api.github.com/users/nicolasxmm/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/nicolasxmm/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/nicolasxmm/subscriptions",
+      "organizations_url": "https://api.github.com/users/nicolasxmm/orgs",
+      "repos_url": "https://api.github.com/users/nicolasxmm/repos",
+      "events_url": "https://api.github.com/users/nicolasxmm/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/nicolasxmm/received_events",
+      "type": "User",
+      "site_admin": false,
+      "score": 1.0
+    },
+    {
+      "login": "NicolasxMunoz",
+      "id": 84405228,
+      "node_id": "MDQ6VXNlcjg0NDA1MjI4",
+      "avatar_url": "https://avatars.githubusercontent.com/u/84405228?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/NicolasxMunoz",
+      "html_url": "https://github.com/NicolasxMunoz",
+      "followers_url": "https://api.github.com/users/NicolasxMunoz/followers",
+      "following_url": "https://api.github.com/users/NicolasxMunoz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/NicolasxMunoz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/NicolasxMunoz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/NicolasxMunoz/subscriptions",
+      "organizations_url": "https://api.github.com/users/NicolasxMunoz/orgs",
+      "repos_url": "https://api.github.com/users/NicolasxMunoz/repos",
+      "events_url": "https://api.github.com/users/NicolasxMunoz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/NicolasxMunoz/received_events",
+      "type": "User",
+      "site_admin": false,
+      "score": 1.0
+    }
+  ]
+}""";

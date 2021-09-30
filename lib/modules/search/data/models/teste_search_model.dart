@@ -1,10 +1,9 @@
 import 'dart:convert';
-
 import 'package:inspec_solar/modules/search/domain/entities/teste_search.dart';
 
 class TesteSearchModel implements TesteSearch {
-  final String? title;
-  final String? subtitle;
+  final String title;
+  final String subtitle;
 
   TesteSearchModel({required this.title, required this.subtitle});
 
