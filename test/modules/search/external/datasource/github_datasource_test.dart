@@ -14,7 +14,7 @@ main() {
 
   final datasource = GitHubDataSource(dio);
 
-  test('', () async {
+  test('deve retonar uma lista de TestSearchModel', () async {
     var options;
     when(dio.get('any')).thenAnswer((_) async => Response(
         data: jsonDecode(githubResult),
@@ -37,7 +37,6 @@ main() {
   });
 
   test('deve retornar um erro se estiver com erro no package Dio', () async {
-    var options;
     when(dio.get('any')).thenThrow(Exception());
 
     final result = datasource.getSearch("TesteResult");

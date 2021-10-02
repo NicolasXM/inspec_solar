@@ -13,6 +13,7 @@ class GitHubDataSource implements TesteDataSource {
     final response =
         await dio.get("https://api.github.com/search/users?q=nicolasxm");
 
+    // ignore: unrelated_type_equality_checks
     if (response.statusCode == "200") {
       final list = (response.data['items'] as List)
           .map((e) => TesteSearchModel.fromMap(e))
