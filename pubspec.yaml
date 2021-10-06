@@ -22,6 +22,7 @@ environment:
 
 dependencies:
   flutter_modular: ^4.1.0
+  modular_test:
   dartz: ^0.10.0
   flutter:
     sdk: flutter
