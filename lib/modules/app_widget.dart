@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 
 class AppWidget extends StatelessWidget {
   // This widget is the root of your application.
@@ -9,7 +10,7 @@ class AppWidget extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Container(),
+      onGenerateRoute: ModularA,
     );
   }
 }
