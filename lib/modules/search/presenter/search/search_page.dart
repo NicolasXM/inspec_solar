@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 
+import 'package:flutter_modular/flutter_modular.dart';
+
 class SearchPage extends StatefulWidget {
   @override
-  SearchPage_State createState() => SearchPage_State();
+  _SearchPageState createState() => _SearchPageState();
 }
 
-class SearchPage_State extends State<SearchPage> {
+class _SearchPageState extends ModularState<SearchPage, SearchStore> {
   @override
-  Widget build(BuildContext context) {
+  Widget _buildList(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text('GitHubSearch'),
@@ -16,7 +18,11 @@ class SearchPage_State extends State<SearchPage> {
         children: <Widget>[
           TextField(),
           Expanded(child: ListView.builder(itemBuilder: (_, id) {
-            return ListTile();
+            return ListTile(
+              leading: CircleAvatar(
+                backgroundImage: NetworkImage(item.image),
+              ),
+            );
           }))
         ],
       ),
