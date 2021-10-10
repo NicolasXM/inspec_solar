@@ -18,7 +18,7 @@ class AppModule extends Module {
 
   @override
   List<ModularRoute> get routers => [
-        ChildRoute('/', child: (context, args) => SearchPage()),
+        ChildRoute('/', child: (context, args) => SearchPageState()),
       ];
   @override
   Widget get bootstrap => AppWidget();

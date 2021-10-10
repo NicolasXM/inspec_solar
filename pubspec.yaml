@@ -24,6 +24,7 @@ dependencies:
   flutter_modular: ^4.1.0
   modular_test:
   dartz: ^0.10.0
+  mobx: ^2.0.5
   flutter:
     sdk: flutter
   
@@ -33,7 +34,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   dio: ^4.0.0
-  mobx: ^2.0.5
+  
   
 
 dev_dependencies:
