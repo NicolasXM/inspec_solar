@@ -3,13 +3,15 @@ import 'package:flutter_modular/flutter_modular.dart';
 import 'package:inspec_solar/modules/search/domain/entities/teste_search.dart';
 import 'package:inspec_solar/modules/search/domain/errors/error_search.dart';
 import 'package:inspec_solar/modules/search/presenter/search/state/search_state.dart';
+import 'search_store_page.dart';
+import 'state/search_state.dart';
 
-abstract class SearchPage extends StatefulWidget {
+class SearchPage extends StatefulWidget {
   @override
-  _SearchPageState createState() => _SearchPageState();
+  SearchPageState createState() => SearchPageState();
 }
 
-class _SearchPageState extends ModularState<SearchPage, SearchStore> {
+class SearchPageState extends ModularState<SearchPage, SearchStore> {
   @override
   Widget _buildList(List<TesteSearch> list) {
     return ListView.builder(
@@ -26,7 +28,7 @@ class _SearchPageState extends ModularState<SearchPage, SearchStore> {
   }
 
   Widget _buildError(ErrorSearch error) {
-    if (error is EmptyList) {
+    if (error is Em) {
       return Center(child: Text("Nenhum valor encontrado"));
     } else if (error is ErrorSearch) {
       return Center(child: Text("Erro no GitHub"));

@@ -4,6 +4,9 @@ import 'package:mobx/mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:async/async.dart';
 
+@Injectable()
+class SearchStore = _SearchStoreBase with _$SearchStore;
+
 abstract class SearchStoreBase with Store {
   late final SearchByText searchByText;
 

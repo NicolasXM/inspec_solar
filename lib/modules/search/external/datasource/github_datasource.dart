@@ -15,9 +15,9 @@ class GitHubDataSource implements TesteDataSource {
 
     // ignore: unrelated_type_equality_checks
     if (response.statusCode == "200") {
-      final list = (response.data['items'] as List)
-          .map((e) => TesteSearchModel.fromMap(e))
-          .toList();
+      var jsonList = response.data['items'] as List;
+      final list =
+          (jsonList).map((item) => TesteSearchModel.fromMap(item)).toList();
 
       return list;
     } else {

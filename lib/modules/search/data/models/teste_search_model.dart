@@ -2,27 +2,39 @@ import 'dart:convert';
 import 'package:inspec_solar/modules/search/domain/entities/teste_search.dart';
 
 class TesteSearchModel implements TesteSearch {
-  final String title;
-  final String subtitle;
+  final String image;
+  final String name;
+  final String nickname;
+  final String url;
 
-  TesteSearchModel({required this.title, required this.subtitle});
+  const TesteSearchModel(
+      {required this.image,
+      required this.name,
+      required this.nickname,
+      required this.url});
 
   Map<String, dynamic> toMap() {
     return {
-      'title': title,
-      'subtitle': subtitle,
+      'image': image,
+      'name': name,
+      'nickname': nickname,
+      'url': url,
     };
   }
 
-  factory TesteSearchModel.fromMap(Map<String, dynamic> map) {
+  static TesteSearchModel? fromMap(Map<String, dynamic> map) {
+    if (map == null) return null;
+
     return TesteSearchModel(
-      title: map['title'],
-      subtitle: map['subtitle'],
+      image: map['image'],
+      name: map['name'],
+      nickname: map['nickname'],
+      url: map['url'],
     );
   }
 
   String toJson() => json.encode(toMap());
 
-  factory TesteSearchModel.fromJson(String source) =>
-      TesteSearchModel.fromMap(json.decode(source));
+  static TesteSearchModel? fromJson(String source) =>
+      fromMap(json.decode(source));
 }
