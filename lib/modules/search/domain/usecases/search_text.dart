@@ -21,11 +21,8 @@ class SearchByTextImpl implements SearchByText {
 
     return option.fold(() => Left(InvalidTextError()), (text) async {
       var result = await repository!.search(text);
-
       return result.fold(
-        (l) => left(l), (r) => r.isEmpty ? left(EmptyList()) : right(r));
-
-      );
+          (l) => left(l), (r) => r.isEmpty ? left(EmptyList()) : right(r));
     });
 
     //if (listsearch == null && listsearch!.isEmpty) {

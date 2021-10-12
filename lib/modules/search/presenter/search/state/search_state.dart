@@ -3,7 +3,7 @@ import 'package:inspec_solar/modules/search/domain/errors/error_search.dart';
 
 abstract class SearchState {}
 
-class StartState implements SearchState  {
+class StartState implements SearchState {
   const StartState();
 }
 
@@ -16,8 +16,8 @@ class ErrorState implements SearchState {
   const ErrorState(this.error);
 }
 
-class SuccessState {
-  final List<TesteSearch> list;
+class SuccessState implements SearchState {
+  final List<TesteSearch?> list;
 
   const SuccessState(this.list);
 }
