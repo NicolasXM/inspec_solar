@@ -11,7 +11,7 @@ class TesteRepositoryImp implements TesteRepository {
   TesteRepositoryImp(this.datasource);
 
   @override
-  Future<Either<ErrorSearch, List<TesteSearch?>>> search(
+  Future<Either<ErrorSearch, List<TesteSearch>>> search(
       String listsearch) async {
     try {
       final result = await datasource.getSearch(listsearch);

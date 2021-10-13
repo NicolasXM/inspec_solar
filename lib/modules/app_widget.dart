@@ -3,7 +3,9 @@ import 'package:flutter_modular/flutter_modular.dart';
 
 class AppWidget extends StatelessWidget {
   // This widget is the root of your application.
-  late final GlobalKey<NavigatorState>? navigatorkey;
+  final GlobalKey<NavigatorState> navigatorkey;
+
+  const AppWidget({Key key, this.navigatorkey}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

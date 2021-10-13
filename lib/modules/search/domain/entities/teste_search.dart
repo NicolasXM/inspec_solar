@@ -4,9 +4,5 @@ class TesteSearch {
   final String nickname;
   final String url;
 
-  TesteSearch(
-      {required this.image,
-      required this.name,
-      required this.nickname,
-      required this.url});
+  TesteSearch({this.image, this.name, this.nickname, this.url});
 }

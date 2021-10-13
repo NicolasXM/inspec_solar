@@ -1,4 +1,3 @@
-import 'package:inspec_solar/modules/search/domain/entities/teste_search.dart';
 import 'package:inspec_solar/modules/search/domain/usecases/search_text.dart';
 import 'package:inspec_solar/modules/search/presenter/search/state/search_state.dart';
 import 'package:mobx/mobx.dart';
@@ -8,26 +7,26 @@ import 'package:async/async.dart';
 import 'state/search_state.dart';
 
 @Injectable()
-class SearchStore = _SearchStoreBase with SearchStore;
+class SearchStore = _SearchStoreBase with _$SearchStore;
 
 abstract class _SearchStoreBase with Store {
-  late final SearchByText searchByText;
+  final SearchByText searchByText;
 
-  late final CancelableOperation cancelableOperation;
+  final CancelableOperation cancelableOperation;
 
-  _SearchStoreBase(this.searchByText) {
+  _SearchStoreBase(this.searchByText, this.cancelableOperation) {
     reaction((_) => searchByText, (text) async {
       stateReaction(text, cancelableOperation);
     }, delay: 500);
   }
 
   Future stateReaction(
-      String? text, CancelableOperation cancelableOperation) async {
+      String text, CancelableOperation cancelableOperation) async {
     await cancelableOperation.cancel();
     cancelableOperation =
         CancelableOperation<SearchState>.fromFuture(makeSearch(text));
 
-    if (text!.isEmpty) {
+    if (text.isEmpty) {
       setState(StartState());
       return;
     }
@@ -37,7 +36,7 @@ abstract class _SearchStoreBase with Store {
     setState(await cancelableOperation.valueOrCancellation(LoagindState()));
   }
 
-  Future<SearchState> makeSearch(String? text) async {
+  Future<SearchState> makeSearch(String text) async {
     var result = await searchByText(text);
     return result.fold((l) => ErrorState(l), (r) => SuccessState(r));
   }

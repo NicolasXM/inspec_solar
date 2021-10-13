@@ -1,7 +1,7 @@
 import 'dart:core';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-
+import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:inspec_solar/modules/search/domain/entities/teste_search.dart';
 import 'package:inspec_solar/modules/search/domain/errors/error_search.dart';
 import 'package:inspec_solar/modules/search/presenter/search/state/search_state.dart';

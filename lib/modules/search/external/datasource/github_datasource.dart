@@ -9,7 +9,7 @@ class GitHubDataSource implements TesteDataSource {
   GitHubDataSource(this.dio);
 
   @override
-  Future<List<TesteSearchModel?>> getSearch(String? listsearch) async {
+  Future<List<TesteSearchModel>> getSearch(String listsearch) async {
     final response =
         await dio.get("https://api.github.com/search/users?q=nicolasxm");
 

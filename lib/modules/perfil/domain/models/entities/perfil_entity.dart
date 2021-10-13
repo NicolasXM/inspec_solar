@@ -1,9 +1,9 @@
 class Perfil {
-  int? id;
-  late String nome;
+  int id;
+  String nome;
 
   Perfil({
     this.id,
-    required this.nome,
+    this.nome,
   });
 }
