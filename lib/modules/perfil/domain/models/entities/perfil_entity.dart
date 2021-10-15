@@ -3,7 +3,7 @@ class Perfil {
   String nome;
 
   Perfil({
-    this.id,
-    this.nome,
+    required this.id,
+    required this.nome,
   });
 }

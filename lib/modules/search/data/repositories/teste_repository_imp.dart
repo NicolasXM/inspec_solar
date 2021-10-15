@@ -4,6 +4,7 @@ import 'package:inspec_solar/modules/search/domain/errors/error_search.dart';
 import 'package:inspec_solar/modules/search/domain/entities/teste_search.dart';
 import 'package:dartz/dartz.dart';
 import 'package:inspec_solar/modules/search/domain/repositories/teste_repository.dart';
+part 'teste_repository_imp.g.dart';
 
 @Injectable(singleton: false)
 class TesteRepositoryImp implements TesteRepository {
@@ -11,7 +12,7 @@ class TesteRepositoryImp implements TesteRepository {
   TesteRepositoryImp(this.datasource);
 
   @override
-  Future<Either<ErrorSearch, List<TesteSearch>>> search(
+  Future<Either<ErrorSearch, List<TesteSearch?>>> search(
       String listsearch) async {
     try {
       final result = await datasource.getSearch(listsearch);

@@ -215,7 +215,7 @@ packages:
       name: flutter_modular
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "3.4.1+1"
+    version: "4.1.2"
   flutter_modular_annotations:
     dependency: transitive
     description:
@@ -223,13 +223,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.0.2"
-  flutter_modular_test:
-    dependency: "direct dev"
-    description:
-      name: flutter_modular_test
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.0.4"
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -347,6 +340,27 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "3.0.3"
+  modular_core:
+    dependency: transitive
+    description:
+      name: modular_core
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.1.4"
+  modular_interfaces:
+    dependency: transitive
+    description:
+      name: modular_interfaces
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.4"
+  modular_test:
+    dependency: "direct dev"
+    description:
+      name: modular_test
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.1+1"
   package_config:
     dependency: transitive
     description:
@@ -395,7 +409,7 @@ packages:
       name: rxdart
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.24.1"
+    version: "0.27.2"
   shelf:
     dependency: transitive
     description:

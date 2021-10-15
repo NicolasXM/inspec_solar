@@ -2,13 +2,12 @@ import 'dart:convert';
 
 import 'package:dio/dio.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:flutter_modular_test/flutter_modular_test.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:inspec_solar/modules/app_module.dart';
-import 'package:inspec_solar/modules/search/data/models/teste_search_model.dart';
 import 'package:inspec_solar/modules/search/domain/usecases/search_text.dart';
 import 'package:inspec_solar/modules/utils/github_response.dart';
 import 'package:mockito/mockito.dart';
+import 'package:modular_test/modular_test.dart';
 
 class DioMock extends Mock implements Dio {}
 

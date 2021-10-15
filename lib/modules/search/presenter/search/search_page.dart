@@ -16,16 +16,16 @@ class SearchPage extends StatefulWidget {
 
 class _SearchPageState extends ModularState<SearchPage, SearchStore> {
   @override
-  Widget _buildList(List<TesteSearch> list) {
+  Widget _buildList(List<TesteSearch?> list) {
     return ListView.builder(
         itemCount: list.length,
         itemBuilder: (_, index) {
           var item = list[index];
           return ListTile(
             leading: CircleAvatar(
-              backgroundImage: NetworkImage(item.image),
+              backgroundImage: NetworkImage(item?.image),
             ),
-            title: Text(item.nickname),
+            title: Text(item?.nickname),
           );
         });
   }
@@ -33,6 +33,7 @@ class _SearchPageState extends ModularState<SearchPage, SearchStore> {
   Widget _buildError(ErrorSearch error) {
     if (error is EmptyList) {
       return Center(child: Text("Nenhum valor encontrado"));
+      // ignore: unnecessary_type_check
     } else if (error is ErrorSearch) {
       return Center(child: Text("Erro no GitHub"));
     } else {

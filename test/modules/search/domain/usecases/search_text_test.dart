@@ -25,7 +25,8 @@ main() {
     when(repository.search('any'))
         .thenAnswer((_) async => Right(<TesteSearch>[]));
 
-    var result = await usecase(null);
+    var listsearch;
+    var result = await usecase(listsearch);
 
     expect(result.isLeft(), true);
     expect(result.fold(id, id), isA<InvalidTextError>());

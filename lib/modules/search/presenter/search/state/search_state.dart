@@ -17,7 +17,7 @@ class ErrorState implements SearchState {
 }
 
 class SuccessState implements SearchState {
-  final List<TesteSearch> list;
+  final List<TesteSearch?> list;
 
   const SuccessState(this.list);
 }

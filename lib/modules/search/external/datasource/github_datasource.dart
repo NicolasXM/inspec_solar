@@ -1,7 +1,10 @@
 import 'package:dio/dio.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 import 'package:inspec_solar/modules/search/data/datasource/teste_datasource.dart';
 import 'package:inspec_solar/modules/search/data/models/teste_search_model.dart';
 import 'package:inspec_solar/modules/search/domain/errors/error_search.dart';
+
+part 'github_datasource.g.dart';
 
 class GitHubDataSource implements TesteDataSource {
   final Dio dio;
@@ -9,7 +12,7 @@ class GitHubDataSource implements TesteDataSource {
   GitHubDataSource(this.dio);
 
   @override
-  Future<List<TesteSearchModel>> getSearch(String listsearch) async {
+  Future<List<TesteSearchModel?>> getSearch(String listsearch) async {
     final response =
         await dio.get("https://api.github.com/search/users?q=nicolasxm");
 

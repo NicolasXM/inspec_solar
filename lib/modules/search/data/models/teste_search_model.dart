@@ -2,12 +2,16 @@ import 'dart:convert';
 import 'package:inspec_solar/modules/search/domain/entities/teste_search.dart';
 
 class TesteSearchModel implements TesteSearch {
-  final String image;
-  final String name;
-  final String nickname;
-  final String url;
+  final String? image;
+  final String? name;
+  final String? nickname;
+  final String? url;
 
-  const TesteSearchModel({this.image, this.name, this.nickname, this.url});
+  const TesteSearchModel(
+      {required this.image,
+      required this.name,
+      required this.nickname,
+      required this.url});
 
   Map<String, dynamic> toMap() {
     return {
@@ -18,7 +22,8 @@ class TesteSearchModel implements TesteSearch {
     };
   }
 
-  static TesteSearchModel fromMap(Map<String, dynamic> map) {
+  static TesteSearchModel? fromMap(Map<String, dynamic> map) {
+    // ignore: unnecessary_null_comparison
     if (map == null) return null;
 
     return TesteSearchModel(
@@ -31,6 +36,6 @@ class TesteSearchModel implements TesteSearch {
 
   String toJson() => json.encode(toMap());
 
-  static TesteSearchModel fromJson(String source) =>
+  static TesteSearchModel? fromJson(String source) =>
       fromMap(json.decode(source));
 }

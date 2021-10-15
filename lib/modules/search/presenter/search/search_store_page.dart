@@ -1,10 +1,12 @@
 import 'package:inspec_solar/modules/search/domain/usecases/search_text.dart';
 import 'package:inspec_solar/modules/search/presenter/search/state/search_state.dart';
-import 'package:mobx/mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:async/async.dart';
+import 'package:mobx/mobx.dart';
 
 import 'state/search_state.dart';
+
+part 'search_store.g.dart';
 
 @Injectable()
 class SearchStore = _SearchStoreBase with _$SearchStore;
